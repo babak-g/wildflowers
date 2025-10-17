@@ -1,0 +1,25 @@
+{
+  "wildflowers": [
+    {
+      "wildflower_id": 1,
+      "common_name": "Subalpine Lupine",
+      "scientific_name": "Lupinus arcticus",
+      "color": "blue",
+      "elevational_zone": "subalpine",
+      "bloom_start_date": "July 1",
+      "bloom_end_date": "August 31",
+      "image_url": "https://example.com/lupine.jpg"
+    },
+    {
+      "wildflower_id": 4,
+      "common_name": "Broadleaf Lupine",
+      "scientific_name": "Lupinus latifolius",
+      "color": "blue",
+      "elevational_zone": "montane",
+      "bloom_start_date": "June 1",
+      "bloom_end_date": "August 31",
+      "image_url": "https://example.com/broadleaf-lupine.jpg"
+    }
+  ],
+  "total_count": 2
+}

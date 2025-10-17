@@ -1,0 +1,15 @@
+{
+  "wildflowers": [
+    {
+      "wildflower_id": 1,
+      "common_name": "Subalpine Lupine",
+      "scientific_name": "Lupinus arcticus",
+      "color": "blue",
+      "elevational_zone": "subalpine",
+      "bloom_start_date": "July 1",
+      "bloom_end_date": "August 31",
+      "image_url": "https://example.com/lupine.jpg"
+    }
+  ],
+  "total_count": 1
+}
