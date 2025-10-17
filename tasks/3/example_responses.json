@@ -1,0 +1,47 @@
+// ============================================================================
+// GET /wildflowers
+// Returns all wildflowers (unfiltered)
+// ============================================================================
+{"wildflowers":[{"wildflower_id":1,"common_name":"Subalpine Lupine","scientific_name":"Lupinus arcticus","color":"blue","elevational_zone":"subalpine","bloom_start_date":"July 1","bloom_end_date":"August 31","image_url":"https://example.com/lupine.jpg"},{"wildflower_id":2,"common_name":"Glacier Lily","scientific_name":"Erythronium grandiflorum","color":"yellow","elevational_zone":"subalpine","bloom_start_date":"June 15","bloom_end_date":"July 31","image_url":"https://example.com/glacier-lily.jpg"},{"wildflower_id":3,"common_name":"Avalanche Lily","scientific_name":"Erythronium montanum","color":"white","elevational_zone":"subalpine","bloom_start_date":"June 1","bloom_end_date":"August 15","image_url":"https://example.com/avalanche-lily.jpg"},{"wildflower_id":4,"common_name":"Broadleaf Lupine","scientific_name":"Lupinus latifolius","color":"blue","elevational_zone":"montane","bloom_start_date":"June 1","bloom_end_date":"August 31","image_url":"https://example.com/broadleaf-lupine.jpg"},{"wildflower_id":5,"common_name":"Magenta Paintbrush","scientific_name":"Castilleja parviflora","color":"pink","elevational_zone":"subalpine","bloom_start_date":"July 15","bloom_end_date":"September 1","image_url":"https://example.com/paintbrush.jpg"}],"total_count":5}
+
+
+// ============================================================================
+// GET /wildflowers?color=blue
+// Returns wildflowers filtered by color
+// ============================================================================
+{"wildflowers":[{"wildflower_id":1,"common_name":"Subalpine Lupine","scientific_name":"Lupinus arcticus","color":"blue","elevational_zone":"subalpine","bloom_start_date":"July 1","bloom_end_date":"August 31","image_url":"https://example.com/lupine.jpg"},{"wildflower_id":4,"common_name":"Broadleaf Lupine","scientific_name":"Lupinus latifolius","color":"blue","elevational_zone":"montane","bloom_start_date":"June 1","bloom_end_date":"August 31","image_url":"https://example.com/broadleaf-lupine.jpg"}],"total_count":2}
+
+
+// ============================================================================
+// GET /wildflowers?zone=subalpine
+// Returns wildflowers filtered by elevational zone
+// ============================================================================
+{"wildflowers":[{"wildflower_id":1,"common_name":"Subalpine Lupine","scientific_name":"Lupinus arcticus","color":"blue","elevational_zone":"subalpine","bloom_start_date":"July 1","bloom_end_date":"August 31","image_url":"https://example.com/lupine.jpg"},{"wildflower_id":2,"common_name":"Glacier Lily","scientific_name":"Erythronium grandiflorum","color":"yellow","elevational_zone":"subalpine","bloom_start_date":"June 15","bloom_end_date":"July 31","image_url":"https://example.com/glacier-lily.jpg"},{"wildflower_id":3,"common_name":"Avalanche Lily","scientific_name":"Erythronium montanum","color":"white","elevational_zone":"subalpine","bloom_start_date":"June 1","bloom_end_date":"August 15","image_url":"https://example.com/avalanche-lily.jpg"},{"wildflower_id":5,"common_name":"Magenta Paintbrush","scientific_name":"Castilleja parviflora","color":"pink","elevational_zone":"subalpine","bloom_start_date":"July 15","bloom_end_date":"September 1","image_url":"https://example.com/paintbrush.jpg"}],"total_count":4}
+
+
+// ============================================================================
+// GET /wildflowers?scientific_name=Lupinus
+// Returns wildflowers filtered by scientific name
+// ============================================================================
+{"wildflowers":[{"wildflower_id":1,"common_name":"Subalpine Lupine","scientific_name":"Lupinus arcticus","color":"blue","elevational_zone":"subalpine","bloom_start_date":"July 1","bloom_end_date":"August 31","image_url":"https://example.com/lupine.jpg"},{"wildflower_id":4,"common_name":"Broadleaf Lupine","scientific_name":"Lupinus latifolius","color":"blue","elevational_zone":"montane","bloom_start_date":"June 1","bloom_end_date":"August 31","image_url":"https://example.com/broadleaf-lupine.jpg"}],"total_count":2}
+
+
+// ============================================================================
+// GET /wildflowers?color=blue&zone=subalpine
+// Returns wildflowers filtered by multiple criteria
+// ============================================================================
+{"wildflowers":[{"wildflower_id":1,"common_name":"Subalpine Lupine","scientific_name":"Lupinus arcticus","color":"blue","elevational_zone":"subalpine","bloom_start_date":"July 1","bloom_end_date":"August 31","image_url":"https://example.com/lupine.jpg"}],"total_count":1}
+
+
+// ============================================================================
+// GET /wildflowers/1
+// Returns a single wildflower by ID
+// ============================================================================
+{"wildflower_id":1,"common_name":"Subalpine Lupine","scientific_name":"Lupinus arcticus","color":"blue","elevational_zone":"subalpine","bloom_start_date":"July 1","bloom_end_date":"August 31","image_url":"https://example.com/lupine.jpg"}
+
+
+// ============================================================================
+// GET /wildflowers/999
+// Returns 404 Not Found for non-existent ID
+// ============================================================================
+// HTTP Status: 404 Not Found
